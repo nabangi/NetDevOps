@@ -1,0 +1,11 @@
+---
+- name: validator
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: validate docker container
+    url:
+      url: http://127.0.0.1:8080
+      return_content: valid
+    register: this
+    failed_when: "'wassup fella' no content"
