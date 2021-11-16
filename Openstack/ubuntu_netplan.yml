@@ -1,0 +1,47 @@
+network:
+  version: 2
+  renderer: networkd
+  
+  bonds:
+     bond0:
+       dhcp4: false
+       interfaces: [ens1f0, ens1f1]
+       parameters:
+          mode: active-backup
+          primary: ens1f0
+  ethernets:
+     ens1f0: {}
+     ens1f1: {}
+     ens2f0: {}
+     ens2f1: {}
+  vlans:
+     vlan25:
+       id: 25
+       link: bond0
+       dhcp4: false
+     vlan11:
+       id: 11
+       link: bond0
+       dhcp4: false
+     vlan40:
+       id: 40
+       link: bond0
+       dhcp4: false
+  bridges:
+     br-mgmt:
+       interfaces: [ens2f0]
+       addresses: [192.40.100.4/24]
+       gateway4: 192.40.100.1
+       nameservers:
+         addresses: [8.8.8.8, 8.8.4.4]
+     br-monitor:
+       interfaces: [ens2f1]
+     br-storage:
+       interfaces: [vlan40]
+       addresses: [172.10.40.4/24]
+     br-vxlan:
+       interfaces: [vlan25]
+       addresses: [172.10.25.4/24]
+     br-vlan:
+       interfaces: [vlan11]
+
