@@ -5,3 +5,12 @@
 [iptables]
 -A FORWARD --in-interface swp1s0 -j SPAN --dport swp28s1
 -A FORWARD --out-interface swp1s0 -j SPAN --dport swp28s1
+
+#list the rules
+sudo iptables -L -v
+
+#add rules
+cl-acltool -i
+
+cl-acltool -L all | grep SPAN
+sudo iptables -L -v | grep SPAN
