@@ -12,5 +12,6 @@ sudo iptables -L -v
 #add rules
 cl-acltool -i
 
+#verify
 cl-acltool -L all | grep SPAN
 sudo iptables -L -v | grep SPAN
