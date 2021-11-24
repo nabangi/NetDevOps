@@ -65,7 +65,9 @@ cumulus@switch:~$ `net commit`
 To change the hostname, run net add hostname, which modifies both the /etc/hostname and /etc/hosts files with the desired hostname.
 
 cumulus@switch:~$ `net add hostname <hostname>`
+
 cumulus@switch:~$ `net pending`
+
 cumulus@switch:~$ `net commit`
 
 To update the timezone, use NTP interactive mode:
@@ -77,6 +79,7 @@ To update the timezone, use NTP interactive mode:
 Copy the license from a local server. Create a text file with the license and copy it to a server accessible from the switch. On the switch, use the following command to transfer the file directly on the switch, then install the license file:
 
 cumulus@switch:~$ `scp user@my_server:/home/user/my_license_file.txt`
+
 cumulus@switch:~$ `sudo cl-license -i my_license_file.txt`
 
 Copy the file to an HTTP server (not HTTPS), then reference the URL when you run cl-license:
