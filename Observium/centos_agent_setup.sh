@@ -6,11 +6,11 @@ SYSCONTACT=monitor@yourdomain.com
 SYSLOCATION=Africa/Nairobi
 
 # get packages
-yum install snmpd xinetd nano -y
+yum install wget snmpd xinetd nano -y
 
 mkdir -p /opt/observium && cd /opt
 
-wget http://www.observium.org/observium-community-latest.tar.gz
+wget http://www.observium.org/observium-community-latest.tar.gz --no-check-certificate
 tar zxvf observium-community-latest.tar.gz
 
 sed -e "/SNMPDOPTS=/ s/^#*/SNMPDOPTS='-Lsd -Lf \/dev\/null -u snmp -p \/var\/run\/snmpd.pid'\n#/" -i /etc/default/snmpd
