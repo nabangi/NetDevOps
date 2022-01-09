@@ -47,7 +47,7 @@ mkdir -p /usr/lib/observium_agent/local
 # to make this work you have to enable the unix-agent module on your device's settings or globally in config.php ($config['poller_modules']['unix-agent'] = 1;)
 cp observium/scripts/agent-local/AGENTHELPER /usr/lib/observium_agent/local/
 
-yum install libvirt.x86_64
+yum install libvirt.x86_64 -y
 
 chkconfig snmpd on
 systemctl restart xinetd
