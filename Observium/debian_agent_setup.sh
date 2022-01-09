@@ -6,7 +6,7 @@ SYSCONTACT=monitor@yourdomain.com
 SYSLOCATION=Africa/Nairobi
 
 # get packages
-apt install -y snmpd xinetd nano 
+apt install -y snmpd xinetd nano net-snmp-utils
 
 mkdir -p /opt/observium && cd /opt
 
@@ -50,3 +50,4 @@ cp observium/scripts/agent-local/AGENTHELPER /usr/lib/observium_agent/local/
 /etc/init.d/xinetd restart
 systemctl restart snmpd
 systemctl enable snmpd 
+snmpwalk -Os -c public -v 2c localhost
