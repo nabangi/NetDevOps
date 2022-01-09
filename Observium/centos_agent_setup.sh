@@ -53,3 +53,4 @@ chkconfig snmpd on
 systemctl restart xinetd
 systemctl restart snmpd
 systemctl enable snmpd
+snmpwalk -Os -c public -v 2c localhost
