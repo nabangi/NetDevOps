@@ -6,7 +6,7 @@ SYSCONTACT=monitor@yourdomain.com
 SYSLOCATION=Africa/Nairobi
 
 # get packages
-yum install wget snmpd xinetd nano -y
+yum install wget snmpd xinetd net-snmp-utils net-snmp nano -y
 
 mkdir -p /opt/observium && cd /opt
 
@@ -49,6 +49,7 @@ cp observium/scripts/agent-local/AGENTHELPER /usr/lib/observium_agent/local/
 
 yum install libvirt.x86_64
 
+chkconfig snmpd on
 systemctl restart xinetd
 systemctl restart snmpd
 systemctl enable snmpd
