@@ -21,7 +21,7 @@ read -p "Enter the vlan bridge IP (br-vlan)of the server and append a CIDR (e.g 
 echo
 cat > /etc/netplan/01-netcfg.yaml <<EOF
 # This file describes the network interfaces available on your system
-# For more informatiDontCh4ngeMe!on, see netplan(5).
+# For more information, see netplan(5).
 network:
   version: 2
   renderer: networkd
