@@ -2,7 +2,7 @@
 # Author : Alvaro Nabangi
 # CONFIG
 SNMP_COMMUNITY=public
-SYSCONTACT=monitor@yourdomain.com
+SYSCONTACT=infrasnap@gmail.com
 SYSLOCATION=Africa/Nairobi
 
 # get packages
