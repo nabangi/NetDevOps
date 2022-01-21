@@ -10,7 +10,7 @@ Use your editor of choice to edit
 
 #### set it in similar format as this:
 
-`$config['email']['from'] = "system@cool.com";`
+`$config['email']['from'] = "system@cool.com";`<br>
 `$config['email']['backend'] = 'smtp';`
 `$config['email']['smtp_host'] = 'smtp.office365.com';`
 `$config['email']['smtp_port'] = 587;`
