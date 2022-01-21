@@ -6,7 +6,7 @@ SYSCONTACT=monitor@yourdomain.com
 SYSLOCATION=Africa/Nairobi
 
 # get packages
-yum install wget snmpd xinetd net-snmp-utils net-snmp nano -y
+yum install curl wget snmpd xinetd net-snmp-utils net-snmp nano -y
 
 mkdir -p /opt/observium && cd /opt
 
