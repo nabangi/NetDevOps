@@ -47,10 +47,10 @@ Login with default credentials depending on the version you are using
 ## Quick Start
 You can configure the eth0 port with a static IP or leave it to pick from DHCP as it will by default
 
-cumulus@switch:~$ `net add interface eth0 ip address 192.27.3.21/24`
-cumulus@switch:~$ `net add interface eth0 ip gateway 192.27.3.1`
-cumulus@switch:~$ `net pending`
-cumulus@switch:~$ `net commit`
+cumulus@switch:~$ `net add interface eth0 ip address 192.27.3.21/24` <br>
+cumulus@switch:~$ `net add interface eth0 ip gateway 192.27.3.1` <br>
+cumulus@switch:~$ `net pending` <br>
+cumulus@switch:~$ `net commit` <br>
 
 `cat /etc/network/interfaces` 
 
