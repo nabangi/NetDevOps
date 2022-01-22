@@ -14,9 +14,9 @@ Use your editor of choice to edit
 `$config['email']['backend'] = 'smtp';`<br>
 `$config['email']['smtp_host'] = 'smtp.office365.com';`<br>
 `$config['email']['smtp_port'] = 587;`<br>
-`$config['email']['smtp_timeout'] = 10;`
-`$config['email']['smtp_secure'] = 'tls';`
-`$config['email']['smtp_auth'] = TRUE;`
+`$config['email']['smtp_timeout'] = 10;`<br>
+`$config['email']['smtp_secure'] = 'tls';`<br>
+`$config['email']['smtp_auth'] = TRUE;`<br>
 `$config['email']['smtp_username'] = 'system@cool.com';`
 `$config['email']['smtp_password'] = 'password';`
 
