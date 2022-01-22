@@ -17,8 +17,8 @@ Use your editor of choice to edit
 `$config['email']['smtp_timeout'] = 10;`<br>
 `$config['email']['smtp_secure'] = 'tls';`<br>
 `$config['email']['smtp_auth'] = TRUE;`<br>
-`$config['email']['smtp_username'] = 'system@cool.com';`
-`$config['email']['smtp_password'] = 'password';`
+`$config['email']['smtp_username'] = 'system@cool.com';`<br>
+`$config['email']['smtp_password'] = 'password';`<br>
 
 #### Install Sendmail if you already don't hae it running
 
