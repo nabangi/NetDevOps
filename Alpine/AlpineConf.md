@@ -8,14 +8,19 @@
 `hostname -F /etc/hostname`
 
 #### To Configure Network
-Edit `/etc/network/interfaces`
 
-`auto eth0`
+Edit 
 
-`iface eth0 inet static`
-        `address 192.168.1.150/24`
-        `gateway 192.168.1.1`
-        
+`/etc/network/interfaces`
+
+```
+auto eth0
+
+iface eth0 inet static
+        address 192.168.1.150/24
+        gateway 192.168.1.1
+```
+ 
 `Service Network Restart`
 
 Edit
