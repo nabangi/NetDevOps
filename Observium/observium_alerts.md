@@ -24,7 +24,7 @@ Use your editor of choice to edit
 
 Follow the steps in this link:
 
-`https://www.cloudbooklet.com/how-to-install-and-setup-sendmail-on-ubuntu/`
+Visit `https://www.cloudbooklet.com/how-to-install-and-setup-sendmail-on-ubuntu/`
 
 also ensure you have the following setup
 
