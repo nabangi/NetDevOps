@@ -36,7 +36,21 @@ http://dl-cdn.alpinelinux.org/alpine/edge/testing
 
 EOF
 ```
+# Install KVM
 
+####  Guest OS Configs
+```
+virt-install \
+--virt-type=kvm \
+--name centos7 \
+--ram 2048 \
+--vcpus=1 \
+--os-variant=centos7.0 \
+--cdrom=/var/lib/libvirt/boot/CentOS-7-x86_64-Minimal-2009.iso \
+--network=bridge=virbr0,model=virtio \
+--graphics vnc \
+--disk path=/var/lib/libvirt/images/cnod1.qcow2,size=40,bus=virtio,format=qcow2
+```
 #### Other commands
 
 `apk updated`<br>
