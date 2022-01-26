@@ -28,15 +28,15 @@ Visit `https://www.cloudbooklet.com/how-to-install-and-setup-sendmail-on-ubuntu/
 
 also ensure you have the following setup
 
-`sudo apt install openssl sasl2-bin`
+    `sudo apt install openssl sasl2-bin`
 
-`sudo service saslauthd start`
+    `sudo service saslauthd start`
 
 #### Configure Sendmail
 
 Change the Sendmail main config
 
-`sudo vi /etc/mail/sendmail.mc`
+    `sudo vi /etc/mail/sendmail.mc`
 
 Add the line:
 
