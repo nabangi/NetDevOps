@@ -42,6 +42,21 @@ Ensure while setting up Alpine `sys` is the chosen disktype
 
 #### Install packages
     `apk add qemu-system-x86_64 libvirt libvirt-daemon dbus polkit qemu-img`
+load necessary kernel modules
+    `modprobe kvm-intel br_netfilter`
+Add a bridge configuration in `/etc/network/interfaces:`
+```
+auto lo
+iface lo inet loopback
+
+auto br0
+iface br0 inet dhcp
+	pre-up modprobe br_netfilter
+	pre-up echo 0 > /proc/sys/net/bridge/bridge-nf-call-arptables
+	pre-up echo 0 > /proc/sys/net/bridge/bridge-nf-call-iptables
+	pre-up echo 0 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
+	bridge_ports eth0
+```
 ####  Guest OS Configs
 ```
 virt-install \
