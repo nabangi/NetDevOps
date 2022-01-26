@@ -1,17 +1,17 @@
 #### bin/bash
 # Alpine server intital setup
 
-`echo "hostname" > /etc/hostname`
+    `echo "hostname" > /etc/hostname`
 
 #### To activate hostname
 
-`hostname -F /etc/hostname`
+    `hostname -F /etc/hostname`
 
 #### To Configure Network
 
 Edit 
 
-`/etc/network/interfaces`
+    `/etc/network/interfaces`
 
 ```
 auto eth0
@@ -21,7 +21,7 @@ iface eth0 inet static
         gateway 192.168.1.1
 ```
  
-`Service Network Restart`
+    `Service Network Restart`
 
 Edit
 
@@ -38,6 +38,10 @@ EOF
 ```
 # Install KVM
 
+Ensure while setting up Alpine `sys` is the chosen disktype
+
+#### Install packages
+    `apk add qemu-system-x86_64 libvirt libvirt-daemon dbus polkit qemu-img`
 ####  Guest OS Configs
 ```
 virt-install \
