@@ -10,33 +10,35 @@ Use your editor of choice to edit
 
 #### set it in similar format as this:
 
-`$config['email']['from'] = "system@cool.com";`<br>
-`$config['email']['backend'] = 'smtp';`<br>
-`$config['email']['smtp_host'] = 'smtp.office365.com';`<br>
-`$config['email']['smtp_port'] = 587;`<br>
-`$config['email']['smtp_timeout'] = 10;`<br>
-`$config['email']['smtp_secure'] = 'tls';`<br>
-`$config['email']['smtp_auth'] = TRUE;`<br>
-`$config['email']['smtp_username'] = 'system@cool.com';`<br>
-`$config['email']['smtp_password'] = 'password';`<br>
+```
+$config['email']['from'] = "system@cool.com";
+$config['email']['backend'] = 'smtp';
+$config['email']['smtp_host'] = 'smtp.office365.com';
+$config['email']['smtp_port'] = 587;
+$config['email']['smtp_timeout'] = 10;
+$config['email']['smtp_secure'] = 'tls';
+$config['email']['smtp_auth'] = TRUE;
+$config['email']['smtp_username'] = 'system@cool.com';
+$config['email']['smtp_password'] = 'password';
+```
 
 #### Install Sendmail if you already don't hae it running
 
 Follow the steps in this link:
 
-`https://www.cloudbooklet.com/how-to-install-and-setup-sendmail-on-ubuntu/`
+Visit `https://www.cloudbooklet.com/how-to-install-and-setup-sendmail-on-ubuntu/`
 
 also ensure you have the following setup
 
-`sudo apt install openssl sasl2-bin`
+    `sudo apt install openssl sasl2-bin`
 
-`sudo service saslauthd start`
+    `sudo service saslauthd start`
 
 #### Configure Sendmail
 
 Change the Sendmail main config
 
-`sudo vi /etc/mail/sendmail.mc`
+    `sudo vi /etc/mail/sendmail.mc`
 
 Add the line:
 
