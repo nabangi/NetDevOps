@@ -41,21 +41,34 @@ EOF
 Ensure while setting up Alpine `sys` is the chosen disktype
 
 #### Install packages
-    `apk add qemu-system-x86_64 libvirt libvirt-daemon dbus polkit qemu-img`
+    `apk add qemu-system-x86_64 libvirt libvirt-daemon dbus polkit qemu-img bridge`
 load necessary kernel modules
     `modprobe kvm-intel br_netfilter`
-Add a bridge configuration in `/etc/network/interfaces:`
+    
+Add or edit your bridge configuration in `/etc/network/interfaces:`
 ```
 auto lo
 iface lo inet loopback
 
 auto br0
-iface br0 inet dhcp
-	pre-up modprobe br_netfilter
-	pre-up echo 0 > /proc/sys/net/bridge/bridge-nf-call-arptables
-	pre-up echo 0 > /proc/sys/net/bridge/bridge-nf-call-iptables
-	pre-up echo 0 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
-	bridge_ports eth0
+iface br0 inet static
+        address 192.168.1.254
+        netmask 255.255.255.0
+        gateway 192.168.1.1
+        pre-up brctl addbr br0
+        pre-up modprobe br_netfilter
+        pre-up echo 0 > /proc/sys/net/bridge/bridge-nf-call-arptables
+        pre-up echo 0 > /proc/sys/net/bridge/bridge-nf-call-iptables
+        pre-up echo 0 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
+        bridge_ports eth0
+        post-down brctl delbr br0
+
+auto eth0
+iface eth0 inet manual
+        up ip link set $IFACE up
+        up brctl addif br0 $IFACE
+        down brctl delif br0 $IFACE || true
+        down ip link set $IFACE down
 ```
 ####  Guest OS Configs
 ```
