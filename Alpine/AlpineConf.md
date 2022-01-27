@@ -71,6 +71,7 @@ iface eth0 inet manual
         down brctl delif br0 $IFACE || true
         down ip link set $IFACE down
 ```
+Reference Visit: https://wiki.alpinelinux.org/wiki/Bridge
 ####  Guest OS Configs
 ```
 virt-install \
