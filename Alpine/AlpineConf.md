@@ -43,6 +43,7 @@ Ensure while setting up Alpine `sys` is the chosen disktype
 #### Install packages
     `apk add qemu-system-x86_64 libvirt libvirt-daemon dbus polkit qemu-img bridge`
 load necessary kernel modules
+    `modprobe tun`
     `modprobe kvm-intel br_netfilter`
     
 Add or edit your bridge configuration in `/etc/network/interfaces:`
