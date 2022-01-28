@@ -22,25 +22,25 @@ linuxpc:~$ sudo umount /mnt/usb
 
 From Boot Menu to select "BOOT ONIE (Rescue Mode)
 
-`ONIE:/ # onie-discovery-stop`
+    `ONIE:/ # onie-discovery-stop`
 
 #### Then plug in usb drive with desired Image
 
 create a mount location for it
 
-`ONIE:/ # mkdir /mnt/media`
+    `ONIE:/ # mkdir /mnt/media`
 
 Validate the specific file path
 
-`ONIE:/ # blkid`
+    `ONIE:/ # blkid`
   
 #### Use vfat option for the mount since we formatted using FAT32
 
-`ONIE:/ # mount -t vfat /dev/sdb1 /mnt/media`
+    `ONIE:/ # mount -t vfat /dev/sdb1 /mnt/media`
 
 Now we install the OS from the mounted USB
 
-`ONIE:/ # onie-nos-install /mnt/media/<cumulus-install-[PLATFORM].bin>`
+    `ONIE:/ # onie-nos-install /mnt/media/<cumulus-install-[PLATFORM].bin>`
 
 #### After installation and reboot
 
@@ -74,7 +74,7 @@ cumulus@switch:~$ `net commit`
 
 To update the timezone, use NTP interactive mode:
 
-`sudo dpkg-reconfigure tzdata`
+    `sudo dpkg-reconfigure tzdata`
 
 #### There are three ways to install the license onto the switch:
 
