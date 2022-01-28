@@ -4,17 +4,19 @@
     
 #### Preferrably format usb in FAT32 then mount image as follows
     
-`linuxpc:~$ sudo mkdir /mnt/usb`
+```
+linuxpc:~$ sudo mkdir /mnt/usb
 
-`linuxpc:~$ sudo mount /dev/sdb1 /mnt/usb`
+linuxpc:~$ sudo mount /dev/sdb1 /mnt/usb
 
-`linuxpc:~$ sudo cp cumulus_linux.bin /mnt/usb/cumulus_linux.bin`
+linuxpc:~$ sudo cp cumulus_linux.bin /mnt/usb/cumulus_linux.bin
 
-`linuxpc:~$ sudo umount /mnt/usb`
+linuxpc:~$ sudo umount /mnt/usb
+```
 
 #### Use Linux Screen for Console Access
     
-`sudo screen /dev/ttyUSB0 115200` 
+    `sudo screen /dev/ttyUSB0 115200` 
 
 ## Mount USB in Switch
 
