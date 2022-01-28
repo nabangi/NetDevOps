@@ -49,10 +49,12 @@ Login with default credentials depending on the version you are using
 ## Quick Start
 You can configure the eth0 port with a static IP or leave it to pick from DHCP as it will by default
 
-`net add interface eth0 ip address 192.27.3.21/24` <br>
-`net add interface eth0 ip gateway 192.27.3.1` <br>
-`net pending` <br>
-`net commit` <br>
+```
+net add interface eth0 ip address 192.27.3.21/24
+net add interface eth0 ip gateway 192.27.3.1
+net pending
+net commit
+```
 
 `cat /etc/network/interfaces` 
 ```
