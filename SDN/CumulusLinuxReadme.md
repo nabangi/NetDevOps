@@ -55,12 +55,12 @@ You can configure the eth0 port with a static IP or leave it to pick from DHCP a
 `net commit` <br>
 
 `cat /etc/network/interfaces` 
-
-`auto eth0`
-`iface eth0`
-    `address 192.27.3.21/24`
-    `gateway 192.27.3.1`
-
+```
+auto eth0
+iface eth0
+    address 192.27.3.21/24
+    gateway 192.27.3.1
+```
 
 ### Configure the Hostname and Timezone
 
