@@ -93,7 +93,7 @@ virt-install \
 --name almanode1 \
 --ram 2048 \
 --vcpus=2 \
---os-variant=AlmaLinux-8.5 \
+--os-variant=centos7.0 \
 --cdrom=/var/lib/libvirt/boot/AlmaLinux-8.5-x86_64-boot.iso \
 --network=bridge=br0,model=virtio \
 --graphics vnc \
