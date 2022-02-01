@@ -2,11 +2,11 @@
 
 #### First backup config file
 
-    `sudo cp config.php config.php.bk_`date +%Y%m%d%H%M`
+    sudo cp config.php config.php.bk_`date +%Y%m%d%H%M
 
 Use your editor of choice to edit
 
-`config.php` 
+    config.php
 
 #### set it in similar format as this:
 
@@ -29,21 +29,21 @@ Follow the steps in this link:
 Visit `https://www.cloudbooklet.com/how-to-install-and-setup-sendmail-on-ubuntu/`
 
 also ensure you have the following setup
+```
+    sudo apt install openssl sasl2-bin
 
-    `sudo apt install openssl sasl2-bin`
-
-    `sudo service saslauthd start`
-
+    sudo service saslauthd start
+```
 #### Configure Sendmail
 
 Change the Sendmail main config
 
-    `sudo vi /etc/mail/sendmail.mc`
+    sudo vi /etc/mail/sendmail.mc
 
 Add the line:
 
-    `include(`/etc/mail/tls/starttls.m4')dnl`
+    include(`/etc/mail/tls/starttls.m4')dnl
 
 below the line:
 
-    `include(`/usr/share/sendmail/cf/m4/cf.m4')dnl`
+    include(`/usr/share/sendmail/cf/m4/cf.m4')dnl
