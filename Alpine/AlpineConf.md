@@ -1,17 +1,17 @@
 #### bin/bash
 # Alpine server intital setup
 
-    `echo "hostname" > /etc/hostname`
+    echo "hostname" > /etc/hostname
 
 #### To activate hostname
 
-    `hostname -F /etc/hostname`
+    hostname -F /etc/hostname
 
 #### To Configure Network
 
 Edit 
 
-    `/etc/network/interfaces`
+    /etc/network/interfaces
 
 ```
 auto eth0
