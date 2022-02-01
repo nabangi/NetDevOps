@@ -103,9 +103,10 @@ virt-install \
 
 ```
 #### Other commands
-
-`apk updated`<br>
-`apk add openssh`<br>
-`rc-update add sshd`<br>
-`rc-status`<br>
+```
+apk updated
+apk add openssh
+rc-update add sshd
+rc-status
+```
 
