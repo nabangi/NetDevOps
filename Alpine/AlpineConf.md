@@ -21,11 +21,11 @@ iface eth0 inet static
         gateway 192.168.1.1
 ```
  
-    `Service Network Restart`
+    Service Network Restart
 
 Edit
 
-`/etc/ssh/sshd_config`
+    /etc/ssh/sshd_config
 
 ```
 cat > /etc/apk/repositories << EOF; $(echo)
@@ -41,10 +41,12 @@ EOF
 Ensure while setting up Alpine `sys` is the chosen disktype
 
 #### Install packages
-    `apk add qemu-system-x86_64 libvirt libvirt-daemon dbus polkit qemu-img bridge`
+    apk add qemu-system-x86_64 libvirt libvirt-daemon dbus polkit qemu-img bridge
 load necessary kernel modules
-    `modprobe tun`
-    `modprobe kvm-intel br_netfilter`
+```
+    modprobe tun
+    modprobe kvm-intel br_netfilter
+```
     
 Add or edit your bridge configuration in `/etc/network/interfaces:`
 ```
